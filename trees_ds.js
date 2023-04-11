@@ -62,7 +62,8 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
-tree.lookup(9);
+console.log(tree.lookup(9));
+console.log(tree);
 // JSON.stringify(traverse(tree.root));
 
 function traverse(node) {
