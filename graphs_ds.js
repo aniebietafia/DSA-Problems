@@ -41,4 +41,4 @@ myGraph.addEdge("4", "5");
 myGraph.addEdge("1", "2");
 myGraph.addEdge("1", "0");
 
-myGraph.showConnections();
+console.log(myGraph.showConnections());
