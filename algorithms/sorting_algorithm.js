@@ -1,4 +1,5 @@
 // Bubble Sort
+/**
 const nums = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 const bubbleSort = (array) => {
@@ -13,4 +14,23 @@ const bubbleSort = (array) => {
   }
 };
 bubbleSort(nums);
+console.log(nums);
+*/
+
+// Selection sort
+const nums = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+function selectionSort(array) {
+  for (let i = 0; i < array.length; i++) {
+    let minimum = i;
+    let temp = array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[minimum]) {
+        minimum = j;
+      }
+    }
+    array[i] = array[minimum];
+    array[minimum] = temp;
+  }
+}
+selectionSort(nums);
 console.log(nums);
