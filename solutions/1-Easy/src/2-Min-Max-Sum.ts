@@ -45,14 +45,14 @@ Hints: Beware of integer overflow! Use 64-bit Integer.
 
 export default function miniMaxSum(arr: number[]): void {
   // sort the array from lowest to highest
-  arr.sort((a, b) => a - b);
+  arr.sort((a: number, b: number): number => a - b);
 
   // get the total of the elements in the array
-  const sum = arr.reduce((acc, curr) => acc + curr, 0);
+  const sum: number = arr.reduce((acc, curr) => acc + curr, 0);
 
   // subtract the biggest number in the array from the sum
   // to get the minimum sum
-  const minSum = sum - arr[arr.length - 1];
+  const minSum: number = sum - arr[arr.length - 1];
 
   // substract the smallest number in the array from the sum
   // to get the maximum sum
