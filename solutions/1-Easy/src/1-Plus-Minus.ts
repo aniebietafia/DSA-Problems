@@ -54,10 +54,10 @@ The proportions of occurrence are positive: 3/6 = 0.500000, negative: 2/6 = 0.33
 */
 
 export default function plusMinus(arr: number[]): void {
-  const length = arr.length;
-  let positives = 0;
-  let negatives = 0;
-  let zeros = 0;
+  const length: number = arr.length;
+  let positives: number = 0;
+  let negatives: number = 0;
+  let zeros: number = 0;
   for (let i = 0; i < length; i++) {
     if (arr[i] > 0) positives++;
     if (arr[i] < 0) negatives++;
