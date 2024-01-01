@@ -1,0 +1,17 @@
+{
+  "name": "1-easy",
+  "packageManager": "yarn@4.0.2",
+  "volta": {
+    "node": "20.10.0",
+    "yarn": "4.0.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "yarn tsc",
+    "dev": "ts-node src/index.ts"
+  }
+}
