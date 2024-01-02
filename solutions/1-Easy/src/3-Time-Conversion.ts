@@ -42,27 +42,26 @@ Sample Output
 
 function timeConversion(s: string): string {
   // Write your code here
-  const timeArr = s.split(":");
-  let hour = timeArr[0];
-  let minute = timeArr[1];
-  let seconds = timeArr[2].substring(0, 2);
-  let ampm = timeArr[2].substring(2).toLowerCase();
-  let am = "AM".toLowerCase();
-  let pm = "PM".toLowerCase();
+  const timeArray = s.split(":");
+  const hour = timeArray[0];
+  const minute = timeArray[1];
+  const seconds = timeArray[2].substring(0, 2);
+  const ampm = timeArray[2].substring(2).toLowerCase();
+
   let newHour;
 
-  if (ampm === am && hour === "12") {
+  if (ampm === "am" && hour === "12") {
     newHour = "00";
-  } else if (ampm === pm && hour === "12") {
+  } else if (ampm === "pm" && hour === "12") {
     newHour = "12";
-  } else if (ampm === pm) {
+  } else if (ampm === "pm") {
     newHour = parseInt(hour, 10) + 12;
   } else {
     newHour = hour;
   }
 
-  return `${newHour}:${minute}:${seconds}`;
+  return `${hour}:${minute}:${seconds}`;
 }
 
-const result = timeConversion("07:05:45pM");
+const result = timeConversion("01:05:45pM");
 console.log(result);
