@@ -42,11 +42,11 @@ Sample Output
 
 function timeConversion(s: string): string {
   // Write your code here
-  const timeArray = s.split(":");
-  const hour = timeArray[0];
-  const minute = timeArray[1];
-  const seconds = timeArray[2].substring(0, 2);
-  const ampm = timeArray[2].substring(2).toLowerCase();
+  const timeArray: string[] = s.split(":");
+  const hour: string = timeArray[0];
+  const minute: string = timeArray[1];
+  const seconds: string = timeArray[2].substring(0, 2);
+  const ampm: string = timeArray[2].substring(2).toLowerCase();
 
   let newHour: string | number;
 
