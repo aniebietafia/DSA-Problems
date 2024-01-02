@@ -48,7 +48,7 @@ function timeConversion(s: string): string {
   const seconds = timeArray[2].substring(0, 2);
   const ampm = timeArray[2].substring(2).toLowerCase();
 
-  let newHour;
+  let newHour: string | number;
 
   if (ampm === "am" && hour === "12") {
     newHour = "00";
@@ -60,7 +60,7 @@ function timeConversion(s: string): string {
     newHour = hour;
   }
 
-  return `${hour}:${minute}:${seconds}`;
+  return `${newHour}:${minute}:${seconds}`;
 }
 
 const result = timeConversion("01:05:45pM");
