@@ -67,3 +67,5 @@ export default function plusMinus(arr: number[]): void {
   console.log((negatives / length).toFixed(6));
   console.log((zeros / length).toFixed(6));
 }
+
+plusMinus([-4, 3, -9, 0, 4, 1]);
