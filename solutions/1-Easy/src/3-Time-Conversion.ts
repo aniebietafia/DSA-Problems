@@ -40,6 +40,7 @@ Sample Output
  * The function accepts STRING s as parameter.
  */
 
+// solution 1 - using Date object
 function timeConversion(s: string): string {
   // Write your code here
   const timeArray: string[] = s.split(":");
@@ -65,3 +66,13 @@ function timeConversion(s: string): string {
 
 const result = timeConversion("01:05:45pM");
 console.log(result);
+
+// solution 2 - using Date object
+function timeConversion2(s: string): string {
+  // Write your code here
+  const date = new Date(`01/01/2000 ${s}`);
+  const time = date.toTimeString().split(" ")[0];
+  return time;
+}
+const result2 = timeConversion("04:05:45pM");
+console.log(result2);
