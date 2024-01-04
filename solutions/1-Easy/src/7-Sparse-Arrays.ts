@@ -136,3 +136,23 @@ console.log(
 console.log(matchingStrings(["ab", "ab", "abc"], ["ab", "abc", "bc"]));
 
 // Optimal solution
+function matchingStrings2(strings: string[], queries: string[]): number[] {
+  const result: number[] = [];
+  const map = new Map();
+  for (let i = 0; i < strings.length; i++) {
+    if (map.has(strings[i])) {
+      map.set(strings[i], map.get(strings[i]) + 1);
+    } else {
+      map.set(strings[i], 1);
+    }
+  }
+  for (let i = 0; i < queries.length; i++) {
+    if (map.has(queries[i])) {
+      result.push(map.get(queries[i]));
+    } else {
+      result.push(0);
+    }
+  }
+  return result;
+}
+console.log(matchingStrings2(["ab", "ab", "abc"], ["ab", "abc", "bc"]));
